@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style> 
+        input[type=button], input[type=submit], input[type=reset] {
+          background-color: #4CAF50;
+          border: none;
+          color: white;
+          padding: 16px 32px;
+          text-decoration: none;
+          margin: 4px 2px;
+          cursor: pointer;
+        }
+        </style>
+</head>
+<body style="background-color:whitesmoke;font-family:'Verdana'">
+
+<form action="http://localhost:5000/upload", method="post", enctype="multipart/form-data">
+    <p>1. Choose CSV:</p>
+    <input type="file" id="in_file" name="input_file">
+
+    <p> </p> <hr style="height:2px;border-width:0;color:gray;background-color:gray"> <p> </p>
+
+    <label for="time_col">2. Time Column: (Ex: time)</label><br>
+    <p> </p>
+    <input type="text" id="time_col" name="time_col" value="">
+
+    <p> </p> <hr style="height:2px;border-width:0;color:gray;background-color:gray"> <p> </p>
+
+    <label for="value_col">3. Value Column: (Ex: value)</label><br>
+    <p> </p>
+    <input type="text" id="value_col" name="value_col" value="">
+
+    <p> </p> <hr style="height:2px;border-width:0;color:gray;background-color:gray"> <p> </p>
+
+    <label for="pred_length">4. Forecast Length: (Ex: 7)</label><br>
+    <p> </p>
+    <input type="text" id="pred_length" name="pred_length" value="">
+
+    <p> </p> <hr style="height:2px;border-width:0;color:gray;background-color:gray"> <p> </p>
+
+    <center><input type="submit" value="Forecast"></center>
+    <p> </p>
+    <center><input type="reset" value="Clear"></center>
+
+    <p> </p> <hr style="height:2px;border-width:0;color:gray;background-color:gray"> <p> </p>
+</form>
+
+</body>
+</html>
