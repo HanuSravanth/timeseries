@@ -18,8 +18,8 @@ st.sidebar.markdown("## Input")
 submit_form = st.sidebar.form(key='timeseries-upload-form')
 
 ts_file = submit_form.file_uploader("Upload a file with Time Series data", type={"csv", "txt"})
-time_col = submit_form.text_input("Input time column", "Date", key="time",)
-value_col = submit_form.text_input("Input value column", "Close", key="value",)
+time_col = submit_form.text_input("Input time column", "time", key="time",)
+value_col = submit_form.text_input("Input value column", "value", key="value",)
 
 submit_button = submit_form.form_submit_button('Submit')
 if submit_button:
